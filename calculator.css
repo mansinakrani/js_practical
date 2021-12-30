@@ -1,12 +1,16 @@
 .cal {
     width: 400px;
+}
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 2px;
 }
 
 table {
-    background-color: white;
+    background-color: rgb(132, 201, 231);
     border-spacing: 1px;
     border-collapse: collapse;
 }
@@ -14,7 +18,7 @@ table {
 table tr td {
     width: 100%;
     border: none;
-    background-color: white;
+    background-color: rgb(132, 201, 231);
     text-align: right;
     font-weight: bold;
     font-size: small;
