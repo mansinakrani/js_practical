@@ -18,71 +18,53 @@ let deg = () => {
 
 // equal operator
 let Answer = () => {
-    numberbefore = answer.value; 
-    document.getElementById("sm").innerHTML=answer.value; // displaying operations 
-    answer.value = eval(answer.value);// for calculating basic math operations
-    numberafter = answer.value;
-    num = numberbefore + '=' + numberafter;
-    if(Number.isNaN(numberafter))return; // checks nan if yes then returned else will considered as number 
-    HistoryRegister.push(num); //pushes the elements in array
-    list1.innerHTML='';
-    HistoryRegister.forEach((element) => {
-        list1.innerHTML += '<li>' + element + '</li>'; //prints element history block 
-    });
 
 }
 
-
+const ms = [];
+var index = 0;
 // function memory save
 let memorysave = () =>{
-    num = result.value; 
-    if(Number.isNaN(num))return; // checks nan if yes then returned else will considered as number 
-    memoryRegister.push(num); //pushes the elements in array
-    list.innerHTML='';
-    memoryRegister.forEach((element) => {
-        list.innerHTML += '<li>' + element + '</li>'; //prints element in memory block 
-    });
+    if (ms.length == 0) {
+        alert("Nothing is stored in memory");
+      } else {
+        index %= ms.length;
+        result.value = ms[index];
+        index++;
+      }
 }
 
 //function memory plus
 let memoryplus = () => {
-    num = result.value;
-    if(Number.isNaN(num)) return; // checks nan if yes then returned else will considered as number 
-    lastvalue = list.lastChild.innerHTML; // takes last element of list and stores in lastvalue
-    ans = parseInt(lastvalue) + parseInt(num); //adds the last item in memory and the number
-    memoryRegister.pop(lastvalue);//pops out the lastvalue in array
-    memoryRegister.push(ans);//pushes the elements in array
-    list.innerHTML='';
-    memoryRegister.forEach((element) => {
-        list.innerHTML += '<li>' + element + '</li>'; //prints element in memory block 
-    });
+    ms.push(parseInt(result.value));
+    result.value = "";
+    console.log(ms);
 }
 
 //function memory minus
 let memoryminus = () => {
-    num = result.value;
-    if(Number.isNaN(num)) return; // checks  nan if yes then returned else will considered as number
-    lastvalue = list.lastChild.innerHTML;  // takes last element of list and stores in lastvalue
-    ans = parseInt(lastvalue) - parseInt(num); //substracts the last item in memory and the number
-    memoryRegister.pop(lastvalue);//pops out the lastvalue in array
-    memoryRegister.push(ans);//pushes the elements in array
-    list.innerHTML='';
-    memoryRegister.forEach((element) => {
-        list.innerHTML += '<li>' + element + '</li>'; //prints element in memory block 
-    });
+    let temp = "-" + result.value;
+    ms.push(parseInt(temp));
+    result.value = "";
+    console.log(ms);
 }
 
 //function memory recall 
 let memoryrecall = () => {
-    result.value = list.lastChild.innerHTML; //prints last element in list on display
+    if (ms.length == 0) {
+        alert("othing is stored in memory");
+      } else {
+        var sum = ms.reduce(function (a, b) {
+          return a + b;
+        }, 0);
+        console.log("total" + sum);
+        result.value = sum;
+      }
 }
 
 //function memory clear
 let memoryclear = () => {
-    list.innerHTML='';
-    memoryRegister.forEach((element)=>{
-    while(memoryRegister.length){
-        memoryRegister.pop();
-    }
-  })
+    ms.splice(0, ms.length);
+    result.value = "";
+    console.log(ms);
 }
