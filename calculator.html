@@ -16,79 +16,104 @@
                         <input type="text" id="inputtext" placeholder="0"/>
                     </td>
                 </tr>
-
+                <!--buttons for performing operations-->
                 <tr>
-                    <td>DEG</td>
-                    <td>F-E</td>
+                    <td><button class="border-0 text-muted" onclick="deg()">DEG</button></td>
+                    <td><button class="border-0 text-muted" onclick="f_e()">F-E</button></td>
                 </tr>
 
                 <tr>
-                    <td>MC</td>
-                    <td>MR</td>
-                    <td>M+</td>
-                    <td>M-</td>
-                    <td>MS</td>
+                    <td><button class="border-0 text-muted" onclick="memoryclear()">MC</button></td>
+                    <td><button class="border-0 text-muted" onclick="memoryrecall()">MR</button></td>
+                    <td><button class="border-0 fw-bold" onclick="memoryplus()">M+</button></td>
+                    <td><button class="border-0 fw-bold" onclick="memorysub()">M-</button></td>
+                    <td><button class="border-0 fw-bold" onclick="memorysave()">MS</button></td>
                 </tr>
 
                 <tr>
-                    <td colspan="2">Trigonometry</td>
-                    <td colspan="3">function</td>
+                    <td colspan="3" class="dropdown">
+                        <button class="btn dropdown-toggle border-0"><small> &#9727; Trigonometry</small></button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="sin()">sin</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="cos()">cos</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="tan()">tan</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="asinh()">asinh</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="acosh()">acosh</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="atanh()">atanh</a></li>
+                        </ul>
+                    </td>
+                    <td colspan="2">
+                        <button class="btn dropdown-toggle border-0"><small>&#402;&nbsp; Functions</small></button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="floor()">floor</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="ceil()">ceil</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="random()">random</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="trunc()">trunc</a></li>
+                        </ul>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>2<sup>nd</sup></td>
-                    <td>&pi;</td>
-                    <td>&exponentiale;</td>
-                    <td>C</td>
-                    <td>BACK</td>
+                    <td class="dropdown" >
+                        <button class="btn  dropdown-toggle" type="button"data-bs-toggle="dropdown" aria-expanded="false">2<sup>nd</sup></button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#" onclick="xpow3()">x<sup>3</sup></a></li>
+                          <li><a class="dropdown-item" href="#" onclick="powof2x()">2<sup>x</sup></a></li>
+                          <li><a class="dropdown-item" href="#" onclick="cbrt()">∛</a></li>
+                        </ul>
+                    </td>
+                    <td><button class="border-0" onclick="calculate(3.14)">&pi;</button></td>
+                    <td><button class="border-0" onclick="calculate(2.718)">&exponentiale;</button></td>
+                    <td><button class="border-0" onclick="clr()">C</button></td>
+                    <td><button class="border-0" onclick="del()">&#x232b;</button></td>
                 </tr>
 
                 <tr>
-                    <td>x<sup>2</sup></td>
-                    <td>1/x</td>
-                    <td>|x|</td>
-                    <td>exp</td>
-                    <td>mod</td>
+                    <td><button class="border-0" onclick="square()">x<sup>2</sup></button></td>
+                    <td><button class="border-0" onclick="reciprocal()">1/x</button></td>
+                    <td><button class="border-0" onclick="abs()">| x |</button></td>
+                    <td><button class="border-0" onclick="exp()">exp</button> </td>
+                    <td><button class="border-0" onclick="calculate('%')">mod</button></td>
                 </tr>
 
                 <tr>
-                    <td>&radic;x</td>
-                    <td>(</td>
-                    <td>)</td>
-                    <td>n&excl;</td>
-                    <td>&divide;</td>
+                    <td><button class="border-0" onclick="sqrt()">&radic;x</button></td>
+                    <td><button class="border-0" onclick="calculate('(')">(</button></td>
+                    <td><button class="border-0" onclick="calculate(')')">)</button></td>
+                    <td><button class="border-0" onclick="fact()">n!</button></td>
+                    <td><button class="border-0" onclick="calculate('/')">&divide;</button></td>
                 </tr>
 
                 <tr>
-                    <td>x<sup>y</sup></td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>&times;</td>
+                    <td><button class="border-0" onclick="calculate('^')">x<sup>y</sup></button></td>
+                    <td><button class="border-0 fw-bold" onclick="calculate(7)">7</button></td>
+                    <td><button class="border-0 fw-bold" onclick="calculate(8)">8</button></td>
+                    <td><button class="border-0 fw-bold" onclick="calculate(9)">9</button></td>
+                    <td><button class="border-0"onclick="calculate('*')">&times;</button></td>
                 </tr>
 
                 <tr>
-                    <td>10<sup>y</sup></td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>&minus;</td>
+                    <td><button class="border-0" onclick="powx()">10<sup>x</sup></button></td>
+                    <td><button class="border-0 fw-bold" onclick="calculate(4)">4</button></td>
+                    <td><button class="border-0 fw-bold" onclick="calculate(5)">5</button></td>
+                    <td><button class="border-0 fw-bold" onclick="calculate(6)">6</button></td>
+                    <td><button class="border-0" onclick="calculate('-')">&minus;</button></td>
                 </tr>
 
                 <tr>
-                    <td>log</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>&plus;</td>
+                    <td><button class="border-0" onclick="log()">log</button></td>
+                    <td><button class="border-0 fw-bold" onclick="calculate(1)">1</button></td>
+                    <td><button class="border-0 fw-bold" onclick="calculate(2)">2</button></td>
+                    <td><button class="border-0 fw-bold" onclick="calculate(3)">3</button></td>
+                    <td><button class="border-0" onclick="calculate('+')">&plus;</button></td>
                 </tr>
 
                 <tr>
-                    <td>ln</td>
-                    <td>&plus;/&minus;</td>
-                    <td>0</td>
-                    <td>.</td>
-                    <td>&equals;</td>
+                    <td><button class="border-0" onclick="ln()">ln</button></td>
+                    <td><button class="border-0" onclick="pm()">&plus;/&minus;</button></td>
+                    <td><button class="border-0 fw-bold" onclick="calculate(0)">0</button></td>
+                    <td><button class="border-0" onclick="calculate('.')">.</button></td>
+                    <td><button class="border-0" onclick="Answer()">&equals;</button></td>
                 </tr>
 
             </table>
