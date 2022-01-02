@@ -158,3 +158,5 @@ let fact = () => {
   result.value = ft;
 }
 
+//function 10 pow x
+let powx = () => result.value = Math.pow(10,result.value); 
