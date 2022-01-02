@@ -160,3 +160,6 @@ let fact = () => {
 
 //function 10 pow x
 let powx = () => result.value = Math.pow(10,result.value); 
+
+//function logarithm or log
+let log = () => result.value = Math.log10(result.value); 
