@@ -79,7 +79,7 @@ let memoryclear = () => {
     console.log(ms);
 }
 
-/* Trigonometry fumctions : */
+/* Trigonometry functions : */
 //sin function 
 let sin = () => result.value = Math.sin(result.value);
 
@@ -137,3 +137,24 @@ let abs = () => result.value = Math.abs(result.value);
 
 //exp() function 
 let exp = () => result.value = Math.exp(result.value);
+
+/* */
+//square root or sqrt() function 
+let sqrt = () => result.value = Math.sqrt(result.value);
+
+//factorial function 
+let fact = () => {
+  n = result.value;
+  ft = 1;
+    if(n == 0 || n == 1) {
+      ft = 1;
+    }
+    else {
+      for(i=n;i>=1;i--)
+      {
+        ft = ft*i;
+      }
+    } 
+  result.value = ft;
+}
+
