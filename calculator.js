@@ -111,5 +111,15 @@ let random = () => result.value = Math.random(result.value);
 //trunc function 
 let trunc = () => result.value = Math.trunc(result.value);
 
+/* */
+//x^3 or xpow3() function 
+let xpow3 = () => result.value = Math.pow(result.value,3);
+
+//2^x or powof2x() function 
+let powof2x = () => result.value = Math.powof2x(2, result.value);
+
+//cuberoot or cbrt() function 
+let cbrt = () => result.value = Math.cbrt(result.value);
+
 
 
