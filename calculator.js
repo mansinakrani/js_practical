@@ -97,3 +97,19 @@ let acosh = () => result.value = Math.acosh(result.value);
 
 //atanh function 
 let atanh = () => result.value = Math.atanh(result.value);
+
+/* fumctions : */
+//floor function 
+let floor = () => result.value = Math.floor(result.value);
+
+//ceil function 
+let ceil = () => result.value = Math.ceil(result.value);
+
+//random function 
+let random = () => result.value = Math.random(result.value);
+
+//trunc function 
+let trunc = () => result.value = Math.trunc(result.value);
+
+
+
