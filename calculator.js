@@ -18,7 +18,17 @@ let deg = () => {
 
 // equal operator
 let Answer = () => {
+  try {
+    result.value=eval(result.value);
+  }
+  catch (err) {
+    alert("Enter the valid input!");
+  }
+};
 
+//Clear value 
+function clr() {
+  result.value = "";
 }
 
 const ms = [];
@@ -68,3 +78,4 @@ let memoryclear = () => {
     result.value = "";
     console.log(ms);
 }
+
