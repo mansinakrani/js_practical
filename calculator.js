@@ -121,5 +121,19 @@ let powof2x = () => result.value = Math.powof2x(2, result.value);
 //cuberoot or cbrt() function 
 let cbrt = () => result.value = Math.cbrt(result.value);
 
+/* */
+//delete function 
+let del = () => result.value = result.value.slice(0,-1);
 
+/* */
+//square function 
+let square = () => result.value = Math.pow(result.value , 2);
 
+//reciprocal function 
+let reciprocal = () => result.value = 1/result.value;
+
+//abs() or | x | function 
+let abs = () => result.value = Math.abs(result.value);
+
+//exp() function 
+let exp = () => result.value = Math.exp(result.value);
