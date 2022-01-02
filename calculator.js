@@ -163,3 +163,10 @@ let powx = () => result.value = Math.pow(10,result.value);
 
 //function logarithm or log
 let log = () => result.value = Math.log10(result.value); 
+
+/* */
+//function ln
+let ln = () => result.value = Math.log(result.value);
+
+//function of +/-
+let pm = () => result.value = -result.value;
