@@ -79,3 +79,21 @@ let memoryclear = () => {
     console.log(ms);
 }
 
+/* Trigonometry fumctions : */
+//sin function 
+let sin = () => result.value = Math.sin(result.value);
+
+//cos function 
+let cos = () => result.value = Math.cos(result.value);
+
+//tan function 
+let tan = () => result.value = Math.tan(result.value);
+
+//asinh function 
+let asinh = () => result.value = Math.asinh(result.value);
+
+//acosh function 
+let acosh = () => result.value = Math.acosh(result.value);
+
+//atanh function 
+let atanh = () => result.value = Math.atanh(result.value);
