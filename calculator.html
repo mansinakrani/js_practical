@@ -11,28 +11,29 @@
     <body>
         <div class="cal">
             
-            <table class="table table-bordered text-center">
+            <table class="table table-bordered text-center box">
                 <tr>
-                    <td colspan="5">
+                    <td colspan="5" class="box ans">
+                        <small class="mx" id="sm"></small>
                         <input type="text" id="inputtext" placeholder="0"/>
                     </td>
                 </tr>
                 <!--buttons for performing operations-->
                 <tr>
-                    <td><button class="border-0 text-muted" onclick="deg()">DEG</button></td>
-                    <td><button class="border-0 text-muted" onclick="f_e()">F-E</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="deg()">DEG</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="f_e()">F-E</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="border-0 text-muted" onclick="memoryclear()">MC</button></td>
-                    <td><button class="border-0 text-muted" onclick="memoryrecall()">MR</button></td>
-                    <td><button class="border-0 fw-bold" onclick="memoryplus()">M+</button></td>
-                    <td><button class="border-0 fw-bold" onclick="memorysub()">M-</button></td>
-                    <td><button class="border-0 fw-bold" onclick="memorysave()">MS</button></td>
+                    <td><button class="border-0 bg-light text-muted" onclick="memoryclear()">MC</button></td>
+                    <td><button class="border-0 bg-light text-muted" onclick="memoryrecall()">MR</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="memoryplus()">M+</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="memorysub()">M-</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="memorysave()">MS</button></td>
                 </tr>
 
                 <tr>
-                    <td colspan="3" class="dropdown">
+                    <td colspan="2" class="dropdown">
                         <button class="btn dropdown-toggle" data-bs-toggle="dropdown"><small> &#9727; Trigonometry</small></button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#" onclick="sin()">sin</a></li>
@@ -43,7 +44,7 @@
                             <li><a class="dropdown-item" href="#" onclick="atanh()">atanh</a></li>
                         </ul>
                     </td>
-                    <td colspan="2">
+                    <td colspan="3">
                         <button class="btn dropdown-toggle" data-bs-toggle="dropdown"><small>&#402;&nbsp; Functions</small></button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#" onclick="floor()">floor</a></li>
@@ -63,58 +64,58 @@
                           <li><a class="dropdown-item" href="#" onclick="cbrt()">∛</a></li>
                         </ul>
                     </td>
-                    <td><button class="border-0" onclick="calculate(3.14)">&pi;</button></td>
-                    <td><button class="border-0" onclick="calculate(2.718)">&exponentiale;</button></td>
-                    <td><button class="border-0" onclick="clr()">C</button></td>
-                    <td><button class="border-0" onclick="del()">&#x232b;</button></td>
+                    <td><button class="border-0 bg-light" onclick="calculate(3.14)">&pi;</button></td>
+                    <td><button class="border-0 bg-light" onclick="calculate(2.718)">&exponentiale;</button></td>
+                    <td><button class="border-0 bg-light" onclick="clr()">C</button></td>
+                    <td><button class="border-0 bg-light" onclick="del()">&#x232b;</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="border-0" onclick="square()">x<sup>2</sup></button></td>
-                    <td><button class="border-0" onclick="reciprocal()">1/x</button></td>
-                    <td><button class="border-0" onclick="abs()">| x |</button></td>
-                    <td><button class="border-0" onclick="exp()">exp</button> </td>
-                    <td><button class="border-0" onclick="calculate('%')">mod</button></td>
+                    <td><button class="border-0 bg-light" onclick="square()">x<sup>2</sup></button></td>
+                    <td><button class="border-0 bg-light" onclick="reciprocal()">1/x</button></td>
+                    <td><button class="border-0 bg-light" onclick="abs()">| x |</button></td>
+                    <td><button class="border-0 bg-light" onclick="exp()">exp</button> </td>
+                    <td><button class="border-0 bg-light" onclick="calculate('%')">mod</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="border-0" onclick="sqrt()">&radic;x</button></td>
-                    <td><button class="border-0" onclick="calculate('(')">(</button></td>
-                    <td><button class="border-0" onclick="calculate(')')">)</button></td>
-                    <td><button class="border-0" onclick="fact()">n!</button></td>
-                    <td><button class="border-0" onclick="calculate('/')">&divide;</button></td>
+                    <td><button class="border-0 bg-light" onclick="sqrt()">&radic;x</button></td>
+                    <td><button class="border-0 bg-light" onclick="calculate('(')">(</button></td>
+                    <td><button class="border-0 bg-light" onclick="calculate(')')">)</button></td>
+                    <td><button class="border-0 bg-light" onclick="fact()">n!</button></td>
+                    <td><button class="border-0 bg-light" onclick="calculate('/')">&divide;</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="border-0" onclick="calculate('^')">x<sup>y</sup></button></td>
-                    <td><button class="border-0 fw-bold" onclick="calculate(7)">7</button></td>
-                    <td><button class="border-0 fw-bold" onclick="calculate(8)">8</button></td>
-                    <td><button class="border-0 fw-bold" onclick="calculate(9)">9</button></td>
-                    <td><button class="border-0"onclick="calculate('*')">&times;</button></td>
+                    <td><button class="border-0 bg-light" onclick="calculate('^')">x<sup>y</sup></button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="calculate(7)">7</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="calculate(8)">8</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="calculate(9)">9</button></td>
+                    <td><button class="border-0 bg-light"onclick="calculate('*')">&times;</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="border-0" onclick="powx()">10<sup>x</sup></button></td>
-                    <td><button class="border-0 fw-bold" onclick="calculate(4)">4</button></td>
-                    <td><button class="border-0 fw-bold" onclick="calculate(5)">5</button></td>
-                    <td><button class="border-0 fw-bold" onclick="calculate(6)">6</button></td>
-                    <td><button class="border-0" onclick="calculate('-')">&minus;</button></td>
+                    <td><button class="border-0 bg-light" onclick="powx()">10<sup>x</sup></button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="calculate(4)">4</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="calculate(5)">5</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="calculate(6)">6</button></td>
+                    <td><button class="border-0 bg-light" onclick="calculate('-')">&minus;</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="border-0" onclick="log()">log</button></td>
-                    <td><button class="border-0 fw-bold" onclick="calculate(1)">1</button></td>
-                    <td><button class="border-0 fw-bold" onclick="calculate(2)">2</button></td>
-                    <td><button class="border-0 fw-bold" onclick="calculate(3)">3</button></td>
-                    <td><button class="border-0" onclick="calculate('+')">&plus;</button></td>
+                    <td><button class="border-0 bg-light" onclick="log()">log</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="calculate(1)">1</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="calculate(2)">2</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="calculate(3)">3</button></td>
+                    <td><button class="border-0 bg-light" onclick="calculate('+')">&plus;</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="border-0" onclick="ln()">ln</button></td>
-                    <td><button class="border-0" onclick="pm()">&plus;/&minus;</button></td>
-                    <td><button class="border-0 fw-bold" onclick="calculate(0)">0</button></td>
-                    <td><button class="border-0" onclick="calculate('.')">.</button></td>
-                    <td><button class="border-0" onclick="Answer()">&equals;</button></td>
+                    <td><button class="border-0 bg-light" onclick="ln()">ln</button></td>
+                    <td><button class="border-0 bg-light" onclick="pm()">&plus;/&minus;</button></td>
+                    <td><button class="border-0 fw-bold bg-light" onclick="calculate(0)">0</button></td>
+                    <td><button class="border-0 bg-light" onclick="calculate('.')">.</button></td>
+                    <td class="equal"><button class="border-0 bg-light" onclick="Answer()">&equals;</button></td>
                 </tr>
 
             </table>
