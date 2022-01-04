@@ -50,6 +50,13 @@ let deg = () => {
 }
 
 //function for F-E -> ('F-E' stands for 'fixed to exponent') 
+function f_e() {
+  return function() {  
+    result.value = Math.pow(10,result);
+    return result.value;
+  };
+}
+
 
 const ms = [];
 var index = 0;
