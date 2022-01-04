@@ -1,6 +1,4 @@
 let result = document.getElementById("inputtext");
-//let memoryRegister = [];
-//let HistoryRegister = [];
 
 //taking input and showing the numbers 1-10 and operators such as pi , e , mod etc
 let calculate = (number) => {
@@ -9,12 +7,32 @@ let calculate = (number) => {
 
 // equal operator
 let Answer = () => {
-  try {
-    result.value=eval(result.value);
-  }
-  catch (err) {
-    alert("Enter the valid input!");
-  }
+    //condition checks the value contains ^ if yes then it will perform x^y
+    if(result.value.includes("^")){
+      temp = result.value;
+      x = temp.split("^")[0];
+      y = temp.substring(temp.indexOf("^") + 1);
+    result.value = Math.pow(x,y);
+    }
+      ans = result.value;
+      console.log("ans_ch",ans);
+      ans=String(ans);
+      ans_new=ans.slice(-1);
+      console.log("ans_new",ans_new);
+      if(isNaN(ans_new)){
+          ans=ans.substring(0, ans.length - 1);
+          numberBefore=ans
+          console.log("numberBefore",numberBefore);
+      }
+      else{
+          numberBefore = result.value;
+      }
+
+  document.getElementById("sm").innerHTML=numberBefore; // displaying operations
+  result.value = eval(numberBefore);// for calculating basic math operations
+  numerAfter = result.value;
+  num = numberBefore + '=' + numberAfter;
+  if(Number.isNaN(numberAfter))return; // checks nan if yes then returned else will considered as number
 };
 
 //Clear value 
@@ -31,7 +49,7 @@ let deg = () => {
     result.value = degr; 
 }
 
-//function for F-E
+//function for F-E -> ('F-E' stands for 'fixed to exponent') 
 
 const ms = [];
 var index = 0;
