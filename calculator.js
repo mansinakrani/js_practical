@@ -197,3 +197,25 @@ let ln = () => result.value = Math.log(result.value);
 
 //function of +/-
 let pm = () => result.value = -result.value;
+
+//function for taking input from keyboard
+let inputKey = (event) => {
+  unicode= event.which;
+  console.log("event",event)
+  console.log(unicode);
+  if (unicode>=48 && unicode <=57 || unicode==94 || unicode==40 || unicode==41  || unicode==42 || unicode==43  || unicode==45 || unicode==47  ){
+  console.log("event1",event)
+  calculate(event.key);
+  }
+  else{
+  }
+  if(unicode==13){
+      Answer();
+  }
+  if (unicode == 46 ) {
+      del();
+  } 
+  /*if (unicode == 8 ) {
+    clr();
+  }*/ 
+}
