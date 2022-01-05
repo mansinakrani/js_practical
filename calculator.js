@@ -30,7 +30,7 @@ let Answer = () => {
 
   document.getElementById("sm").innerHTML=numberBefore; // displaying operations
   result.value = eval(numberBefore);// for calculating basic math operations
-  numerAfter = result.value;
+  numberAfter = result.value;
   num = numberBefore + '=' + numberAfter;
   if(Number.isNaN(numberAfter))return; // checks nan if yes then returned else will considered as number
 };
@@ -62,40 +62,41 @@ const ms = [];
 var index = 0;
 // function memory save
 let memorysave = () =>{
-    if (ms.length == 0) {
-        alert("Nothing is stored in memory");
-      } else {
-        index %= ms.length;
-        result.value = ms[index];
-        index++;
-      }
+  ms.push(parseInt(result.value));
+  result.value = "";
+  console.log(ms);
 }
 
-//function memory plus
+//function memory plus (M+)
 let memoryplus = () => {
-    ms.push(parseInt(result.value));
-    result.value = "";
-    console.log(ms);
+  if (ms.length == 0) {
+    alert("Nothing is stored in memory");
+  } else {
+    var sum = ms.reduce(function (a, b) {
+      return a + b;
+    }, 0);
+    console.log("total " + sum);
+    result.value = sum;
+}
 }
 
 //function memory minus
 let memoryminus = () => {
     let temp = "-" + result.value;
     ms.push(parseInt(temp));
-    result.value = "";
-    console.log(ms);
+    result.value += temp;
+    //console.log(ms);
+    //console.log(result.value);
 }
 
 //function memory recall 
 let memoryrecall = () => {
-    if (ms.length == 0) {
+      if (ms.length == 0) {
         alert("Nothing is stored in memory");
       } else {
-        var sum = ms.reduce(function (a, b) {
-          return a + b;
-        }, 0);
-        console.log("total" + sum);
-        result.value = sum;
+        index %= ms.length;
+        result.value = ms[index];
+        index++;
       }
 }
 
